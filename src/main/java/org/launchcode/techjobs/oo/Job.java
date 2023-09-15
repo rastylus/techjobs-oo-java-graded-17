@@ -29,6 +29,32 @@ public class Job {
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
     }
+    @Override
+    public String toString() {
+//        String [] test = new String[]
+//        for(int i = 0; i < test.length; i++) {
+//
+//        }
+//        String str = "";
+//        String[] words = {};
+//        StringBuilder sb = new StringBuilder();
+//        for (String word : words) {
+//            sb.append(word);
+//        }
+//        String str = sb.toString();
+
+//        for( job:: jobs) {
+        String str =
+        "\nID: " + id +
+                "\nName: " + name +
+                "\nEmployer: " + employer +
+                "\nLocation: " + location +
+                "\nPosition Type: " + positionType +
+                "\nCore Competency: " + coreCompetency;
+//        }
+
+        return System.lineSeparator() + str + System.lineSeparator();
+    }
 
 
 

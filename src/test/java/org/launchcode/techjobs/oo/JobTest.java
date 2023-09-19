@@ -21,7 +21,7 @@ public class JobTest {
             new Location("Desert"), new PositionType("Quality control"),
             new CoreCompetency("Persistence"));
         Job j5 = new Job("Product tester", new Employer("ACME"),
-            new Location(), new PositionType("Quality control"),
+            new Location(""), new PositionType("Quality control"),
             new CoreCompetency("Persistence"));
 //    @BeforeEach
 //    public void init(){
@@ -90,12 +90,12 @@ public class JobTest {
 //                new Location("Desert"), new PositionType("Quality control"),
 //                new CoreCompetency("Persistence"));
         String newline = System.getProperty("line.separator");
-        String str = "\nID: " + j3.getId() +
+        String str = newline + "\nID: " + j3.getId() +
                 "\nName: " + j3.getName() +
                 "\nEmployer: " + j3.getEmployer() +
                 "\nLocation: " + j3.getLocation() +
                 "\nPosition Type: " + j3.getPositionType() +
-                "\nCore Competency: " + j3.getCoreCompetency();
+                "\nCore Competency: " + j3.getCoreCompetency() + newline;
 
 //
 //        assertEquals(System.lineSeparator() +
@@ -109,9 +109,10 @@ public class JobTest {
 //                        System.lineSeparator(),
 //                j3.toString());
 
-            assertEquals(newline +
-                        str +
-                        newline,
+            assertEquals(
+//            newline +
+                        str,
+//                        newline,
                 j3.toString());
 
     }

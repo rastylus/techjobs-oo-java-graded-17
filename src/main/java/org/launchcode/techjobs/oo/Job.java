@@ -44,16 +44,25 @@ public class Job {
 //        String str = sb.toString();
 
 //        for( job:: jobs) {
-        String str =
-        "\nID: " + id +
+//        String str =System.lineSeparator() +
+//                "\nID: " + id +
+//                "\nName: " + name +
+//                "\nEmployer: " + employer +
+//                "\nLocation: " + location +
+//                "\nPosition Type: " + positionType +
+//                "\nCore Competency: " + coreCompetency
+//                + System.lineSeparator();
+//        }
+
+        return System.lineSeparator() +
+//        return
+                "\nID: " + id +
                 "\nName: " + name +
                 "\nEmployer: " + employer +
                 "\nLocation: " + location +
                 "\nPosition Type: " + positionType +
-                "\nCore Competency: " + coreCompetency;
-//        }
-
-        return System.lineSeparator() + str + System.lineSeparator();
+                "\nCore Competency: " + coreCompetency
+                + System.lineSeparator();
     }
 
 

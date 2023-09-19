@@ -12,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 //import static org.junit.Assert.assertNotEquals;
 
 public class JobTest {
+
+        String newline = System.lineSeparator();
         Job j1 = new Job();
         Job j2 = new Job();
         Job j3 = new Job("Product tester", new Employer("ACME"),
@@ -72,35 +74,43 @@ public class JobTest {
     }
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
-        String str = "";
+        String str = "\nID: " + j3.getId() +
+                "\nName: " + j3.getName() +
+                "\nEmployer: " + j3.getEmployer() +
+                "\nLocation: " + j3.getLocation() +
+                "\nPosition Type: " + j3.getPositionType() +
+                "\nCore Competency: " + j3.getCoreCompetency();;
+        String expected = str + newline;
+        assertEquals(expected, j3.toString());
+//        String str = "";
 //        Job j6 = new Job("Product tester", new Employer("ACME"),
 //                new Location("Desert"), new PositionType("Quality control"),
 //                new CoreCompetency("Persistence"));
-        String newline = System.getProperty("line.separator");
-        String fullStr = newline + str + newline;
-        boolean hasNewline = fullStr.contains(newline);
-
+//        String newline = System.getProperty("line.separator");
+//        String fullStr = newline + str + newline;
+//        boolean hasNewline = fullStr.contains(newline);
+//
 //        assertEquals( System.lineSeparator() + "" + System.lineSeparator(),
-//                j6.toString());
-        assertTrue(hasNewline);
+//                j3.toString());
+//        assertTrue(hasNewline);
     }
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
 //        Job j7 = new Job("Product tester", new Employer("ACME"),
 //                new Location("Desert"), new PositionType("Quality control"),
 //                new CoreCompetency("Persistence"));
-        String newline = System.getProperty("line.separator");
-        String str = newline + "\nID: " + j3.getId() +
+        String newline = System.lineSeparator();
+        String str = "ID: " + j3.getId() +
                 "\nName: " + j3.getName() +
                 "\nEmployer: " + j3.getEmployer() +
                 "\nLocation: " + j3.getLocation() +
                 "\nPosition Type: " + j3.getPositionType() +
-                "\nCore Competency: " + j3.getCoreCompetency() + newline;
+                "\nCore Competency: " + j3.getCoreCompetency();
 
 //
 //        assertEquals(System.lineSeparator() +
 //                        "\nID: 3" +
-////                        "\nID: " + j7.getId() +
+//                        "\nID: 3" +
 //                        "\nName: Product tester" +
 //                        "\nEmployer: ACME" +
 //                        "\nLocation: Desert" +
@@ -110,9 +120,9 @@ public class JobTest {
 //                j3.toString());
 
             assertEquals(
-//            newline +
-                        str,
-//                        newline,
+            newline +
+                        str +
+                        newline,
                 j3.toString());
 
     }

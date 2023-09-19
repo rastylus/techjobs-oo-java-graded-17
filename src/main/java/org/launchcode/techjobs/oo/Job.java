@@ -53,16 +53,18 @@ public class Job {
 //                "\nCore Competency: " + coreCompetency
 //                + System.lineSeparator();
 //        }
+        String newline = System.lineSeparator();
+//        return System.lineSeparator() +
+        return  newline +
+                "ID: " + id + newline +
+                "Name: " + name + newline +
+                "Employer: " + employer + newline +
+                "Location: " + location + newline +
+                "Position Type: " + positionType + newline +
+                "Core Competency: " + coreCompetency + newline;
 
-        return System.lineSeparator() +
-//        return
-                "\nID: " + id +
-                "\nName: " + name +
-                "\nEmployer: " + employer +
-                "\nLocation: " + location +
-                "\nPosition Type: " + positionType +
-                "\nCore Competency: " + coreCompetency
-                + System.lineSeparator();
+
+//                + System.lineSeparator();
     }
 
 

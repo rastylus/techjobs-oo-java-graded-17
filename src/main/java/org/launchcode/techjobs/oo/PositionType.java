@@ -1,5 +1,7 @@
 package org.launchcode.techjobs.oo;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Objects;
 
 public class PositionType extends JobField{
@@ -7,11 +9,15 @@ public class PositionType extends JobField{
     super(value);
     }
 
+//    @Override
+//    public boolean equals(Object o) {
+//        return super.equals(o);
+//    }
 }
 
 
 //public class PositionType {
-
+//
 //
 //    private int id;
 //    private static int nextId = 1;
@@ -28,18 +34,19 @@ public class PositionType extends JobField{
 ////        super(value);
 //    }
 //
-//    // TODO: Add a custom toString() method that returns the data stored in 'value'.
+//// //    TODO: Add a custom toString() method that returns the data stored in
+////  'value'.
 //    @Override
 //    public String toString() {
-//        if (value == null) {
-//            value = "Data not available";
+//        if (Objects.equals(value, "")) {
+//            return value = "Data not available";
 //        }
 //        return value;
 //    }
 //
-////    // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
-////    //  their id fields match.
-////
+//    // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
+//    //  their id fields match.
+//
 //    @Override
 //    public boolean equals(Object o) {
 //        if (this == o) return true;
@@ -50,12 +57,12 @@ public class PositionType extends JobField{
 //
 //    @Override
 //    public int hashCode() {
-//        return Objects.hash(id);
+//        return Objects.hash(JobField.nextId);
 //    }
+////
 //
-////
-////    // Getters and Setters:
-////
+//    // Getters and Setters:
+//
 //    public int getId() {
 //        return id;
 //    }
@@ -67,5 +74,7 @@ public class PositionType extends JobField{
 //    public void setValue(String value) {
 //        this.value = value;
 //    }
+//
+//
 //
 //}

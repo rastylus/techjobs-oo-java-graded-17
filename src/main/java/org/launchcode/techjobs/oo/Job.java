@@ -31,30 +31,7 @@ public class Job {
     }
     @Override
     public String toString() {
-//        String [] test = new String[]
-//        for(int i = 0; i < test.length; i++) {
-//
-//        }
-//        String str = "";
-//        String[] words = {};
-//        StringBuilder sb = new StringBuilder();
-//        for (String word : words) {
-//            sb.append(word);
-//        }
-//        String str = sb.toString();
-
-//        for( job:: jobs) {
-//        String str =System.lineSeparator() +
-//                "\nID: " + id +
-//                "\nName: " + name +
-//                "\nEmployer: " + employer +
-//                "\nLocation: " + location +
-//                "\nPosition Type: " + positionType +
-//                "\nCore Competency: " + coreCompetency
-//                + System.lineSeparator();
-//        }
         String newline = System.lineSeparator();
-//        return System.lineSeparator() +
         return  newline +
                 "ID: " + id + newline +
                 "Name: " + name + newline +
@@ -80,10 +57,13 @@ public class Job {
         return id == job.id;
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
+
+
 
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
